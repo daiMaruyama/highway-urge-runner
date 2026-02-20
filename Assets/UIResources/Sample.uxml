@@ -1,0 +1,8 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement style="flex-grow: 1; flex-direction: column; flex-wrap: nowrap; align-items: stretch; align-self: auto;">
+        <ui:VisualElement style="width: 200px; height: 200px; background-color: rgb(58, 75, 124);"/>
+        <ui:VisualElement style="width: 200px; height: 200px; background-color: rgb(58, 124, 73);"/>
+        <ui:VisualElement style="width: 200px; height: 200px; background-color: rgb(124, 117, 58);"/>
+        <ui:VisualElement style="width: 200px; height: 200px; background-color: rgb(124, 79, 58);"/>
+    </ui:VisualElement>
+</ui:UXML>
