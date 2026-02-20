@@ -1,0 +1,18 @@
+:root {
+}
+
+.box {
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    background-color: rgb(255, 139, 46);
+    border-top-width: 10px;
+    border-right-width: 10px;
+    border-bottom-width: 10px;
+    border-left-width: 10px;
+    border-left-color: rgb(224, 89, 5);
+    border-right-color: rgb(224, 89, 5);
+    border-top-color: rgb(224, 89, 5);
+    border-bottom-color: rgb(224, 89, 5);
+}
