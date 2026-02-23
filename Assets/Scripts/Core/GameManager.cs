@@ -15,6 +15,30 @@ namespace HighwayUrge.Core
         // TODO: ClearGame()
         // TODO: GameOver()
         // TODO: ChangeState(GameState newState)
+        static GameManager _instance;
+        public static GameManager Instance
+        {
+            get
+            {
+                if (_instance == null)
+                {
+                    var previous = FindFirstObjectByType<GameManager>();
+                    if (previous)
+                    {
+                        Debug.LogWarning("Initialized twice. Don't use GameManager in the scene hierarchy.");
+                        _instance = (GameManager)previous;
+                    }
+                    else
+                    {
+                        var go = new GameObject("GameManager");
+                        _instance = go.AddComponent<GameManager>();
+                        DontDestroyOnLoad(go);
+                        go.hideFlags = HideFlags.HideInHierarchy;
+                    }
+                }
+                return _instance;
+            }
+        }
     }
 
     /// <summary>
