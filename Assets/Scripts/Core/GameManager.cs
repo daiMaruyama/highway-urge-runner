@@ -20,13 +20,13 @@ namespace HighwayUrge.Core
         {
             get
             {
-                if (_instance == null)
+                if (!_instance)
                 {
                     var previous = FindFirstObjectByType<GameManager>();
                     if (previous)
                     {
                         Debug.LogWarning("Initialized twice. Don't use GameManager in the scene hierarchy.");
-                        _instance = (GameManager)previous;
+                        _instance = previous;
                     }
                     else
                     {
