@@ -8,14 +8,17 @@ namespace HighwayUrge.Core
     /// </summary>
     public class GameManager : MonoBehaviour
     {
-        // TODO: Singleton 実装
-        // TODO: GameState フィールド
+        // DONE: Singleton 実装
+        // DONE: GameState フィールド
         // TODO: Awake() で Singleton 初期化
         // TODO: StartGame()
         // TODO: ClearGame()
         // TODO: GameOver()
         // TODO: ChangeState(GameState newState)
         static GameManager _instance;
+        GameState _currentState = GameState.Title;
+        public GameState CurrentState => _currentState;
+
         public static GameManager Instance
         {
             get
@@ -39,7 +42,12 @@ namespace HighwayUrge.Core
                 return _instance;
             }
         }
+        public void StartGame()
+        {
+            _currentState = GameState.Playing;
+        }
     }
+
 
     /// <summary>
     /// ゲームの状態を表す列挙型
