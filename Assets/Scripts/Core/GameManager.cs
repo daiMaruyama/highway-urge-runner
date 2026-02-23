@@ -11,10 +11,10 @@ namespace HighwayUrge.Core
         // DONE: Singleton 実装
         // DONE: GameState フィールド
         // TODO: Awake() で Singleton 初期化
-        // TODO: StartGame()
-        // TODO: ClearGame()
-        // TODO: GameOver()
-        // TODO: ChangeState(GameState newState)
+        // DONE: StartGame()
+        // DONE: ClearGame()
+        // DONE: GameOver()
+        // DONE: ChangeState(GameState newState)
         static GameManager _instance;
         GameState _currentState = GameState.Title;
         public GameState CurrentState => _currentState;
@@ -42,9 +42,22 @@ namespace HighwayUrge.Core
                 return _instance;
             }
         }
+
         public void StartGame()
         {
-            _currentState = GameState.Playing;
+            ChangeState(GameState.Playing);
+        }
+        public void ClearGame()
+        {
+            ChangeState(GameState.Clear);
+        }
+        public void GameOver()
+        {
+            ChangeState(GameState.GameOver);
+        }
+        void ChangeState(GameState newState)
+        {
+            _currentState = newState;
         }
     }
 
